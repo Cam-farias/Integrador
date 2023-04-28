@@ -1,0 +1,37 @@
+#navgr{
+    color:green
+}
+
+#carpic{
+    filter: brightness(60%);
+    -webkit-filter: brightness(60%);
+}
+
+/*.carousel-inner{
+    height: 80vh;
+}*/
+
+/*.carousel-inner>img{
+  height: 100%;  
+}*/
+
+#textocarousel{
+    position:absolute;
+    top:350px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#confertext{
+
+    box-sizing: content-box;
+    text-align: end;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    
+}
+
+
+
+
+
