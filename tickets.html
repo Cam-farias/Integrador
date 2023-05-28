@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>Comprar tickets</title>
+</head>
+
+<body>
+    <header >
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+            <div class="container-fluid mx-5">
+              <a class="navbar-brand " href="#">
+                <img src="images/codoacodo.png" class="nav_logo" width="90" alt="logo codoacodo">
+            Conf Bs As
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class=" collapse navbar-collapse justify-content-end text-center " id="navbarNav">
+                <ul class="navbar-nav ">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#textocarousel">La conferencia</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#oradores">Los oradores</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#info">El lugar y la fecha</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#serorador">Conviértete en orador</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link" href="tickets.html" id="navgr" >Comprar tickets</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+
+   <main>
+    <div class="card-group my-5 mx-5 gap-3">
+        <div class="card border-info border-2">
+          <div class="card-body">
+            <h5 class="card-title">Estudiante</h5>
+            <p class="card-text">Tienen un descuento</p>
+            <p class="card-text"><b>80%</b></p>
+            <p class="card-text"><small class="text-body-secondary">* presentar documentación</small></p>
+          </div>
+        </div>
+
+        <div class="card border border-2 border-success " >
+          <div class="card-body">
+            <h5 class="card-title">Trainee</h5>
+            <p class="card-text">Tienen un descuento</p>
+            <p class="card-text"><b>50%</b></p>
+            <p class="card-text"><small class="text-body-secondary">* presentar documentación</small></p>
+          </div>
+        </div>
+
+        <div class="card border border-2 border-warning " >
+          <div class="card-body">
+            <h5 class="card-title">Junior</h5>
+            <p class="card-text">Tienen un descuento</p>
+            <p class="card-text"><b>15%</b></p>
+            <p class="card-text"><small class="text-body-secondary">* presentar documentación</small></p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="container-fluid my-5">
+        <div class="row" id="ticket">
+          <p class="text-center my-0 ">VENTA</p>
+          <h2 class="text-center my-0">VALOR DE TICKET $200</h2>
+          
+          <form name="formulario">
+          <div class="mx-auto " style="width: 750px;">
+            <div class="d-md-flex gap-2">
+            <div class=" col my-4">
+            <input type="text" class="form-control form-control-md" name="name" autocomplete="off" placeholder="Nombre">
+            </div>
+            <div class="col my-4">
+            <input type="text" class="form-control form-control-md" name="surname" placeholder="Apellido">
+          </div>
+        </div>
+      
+        <div class="col-12 my-2">
+          <input type="email" class="form-control form-control-md" name="email" autocomplete="off" placeholder="Correo">
+        </div>
+
+        <div class="d-md-flex gap-2">
+          <div class="col my-3">
+            <label for="tickets" class="form-label" >Cantidad</label>
+            <input type="number" name="tickets" id="tickets" class="form-control form-control-md" placeholder="cantidad">
+          </div>
+
+          <div class="col my-3">
+            <label for="category" class="form-label">Categoria</label>
+            <select class="form-select" name="category" id="category">
+              <option selected="" value="none">Elija su categoría</option>
+              <option value="a">Estudiante</option>
+              <option value="b">Trainee</option>
+              <option value="c">Junior</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="totalapagar" class="my-4 p-3 bg-primary bg-opacity-25 rounded-1">Total a Pagar: $</div>
+        
+        <div class="row ">
+          <div class="col my-3">
+        <button id="borrar" type="reset" class="btn w-100 text-white" style="background-color:#A5DF00 ;">Borrar</button>
+          </div>
+        <div class="col my-3">
+        <button id="resumen" type="submit" class="btn w-100 text-white" style="background-color:#A5DF00 ;">Resumen</button>
+          </div>
+        </div>
+
+      </div>
+          </form>
+        </div>
+
+      </div>
+
+   </main> 
+
+
+   <footer class="text-white text-center my-2" style="background-color: #0B2F3A;">
+    <div class="d-md-flex justify-content-evenly p-4 mx-5">
+     <li class="list-group-item my-auto"><a class="text-white link-underline link-underline-opacity-0" href="#">Preguntas <br>Frecuentes</a></li>
+     <li class="list-group-item my-auto"><a class="text-white link-underline link-underline-opacity-0" href="#">Contáctanos</a></li>
+     <li class="list-group-item my-auto"><a class="text-white link-underline link-underline-opacity-0" href="#">Prensa</a></li>
+     <li class="list-group-item my-auto"><a class="text-white link-underline link-underline-opacity-0" href="#">Conferencias</a></li>
+     <li class="list-group-item my-auto"><a class="text-white link-underline link-underline-opacity-0" href="#">Términos y <br> condiciones</a></li>
+     <li class="list-group-item my-auto"><a class="text-white link-underline link-underline-opacity-0" href="#">Privacidad</a></li>
+     <li class="list-group-item my-auto"><a class="text-white link-underline link-underline-opacity-0" href="#">Estudiantes</a></lia>
+    </div> 
+   </footer>
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> 
+
+    <script src="/js/cards.js"></script>
+    <script src="/js/form/var.js"></script>
+    <script src="/js/form/dom.js"></script>
+    <script src="/js/form/funciones.js"></script>
+</body>
+</html>
