@@ -9,15 +9,23 @@ const totalPrice = () => {
     const disc = (totalValue/100)*categories[category].percent
     total = totalValue-disc
    
-    
+    totalTag.style.color='black'
     totalTag.innerText=totalText +  total
 }
 //totalPrice()
 
-const resetCategory = () => {
-    total=null
-    selected=null
-    totalTag.innerText=totalText
+
+const setTickets = (e) => {
+    const {value}=e.target
+
+    if(value<0){
+        e.target.value=0
+        total=null
+        return
+    }
+
+    tickets=value
+    totalPrice()
 }
 
 const setCategory = (e) => {
@@ -33,24 +41,21 @@ const setCategory = (e) => {
     totalPrice()
 }
 
-const setTickets = (e) => {
-    const {value}=e.target
 
-    if(value<0){
-        e.target.value=0
-        total=null
-        return
-    }
 
-    tickets=value
-    totalPrice()
+const resetCategory = () => {
+    total=null
+    selected=null
+    
+    totalTag.innerText=totalText
+    totalTag.style.color='grey'
 }
 
 const reset = (e) => {
    e.preventDefault()
 
    for(let i of inputs)
-    inputs.value=' '
+    i.value=""
    select.value='none'
 
    resetCategory()
@@ -72,12 +77,33 @@ const submit = (e) => {
 
    const values=Object.values(ver)
    const send=values.every(value=>value)
+
+   if(!send){
+    //alert('No ha especificado la categoria')
+    Swal.fire(
+        'No se ha podido enviar el formulario',
+        'Debe seleccionar una categoria',
+        'warning'
+    )
+    return
+   }
+
   console.log(send) 
+  //alert('¡Formulario exitoso!')
+  alertVerified()
+}
+
+const alertVerified= (e) => {
+    Swal.fire(
+        '¡Formulario exitoso!',
+        'Ya puedes cerrar la página',
+        'success'
+    )
 }
 
 
-
-form.category.addEventListener('change', setCategory)
 form.tickets.addEventListener('change',setTickets)
+form.category.addEventListener('change', setCategory)
 form.addEventListener('submit',submit)
 resetB.addEventListener('click',reset)
+submitB.addEventListener('click',alertVerified)
