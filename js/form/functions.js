@@ -90,6 +90,7 @@ const submit = (e) => {
 
   console.log(send) 
   //alert('¡Formulario exitoso!')
+  submitB.addEventListener('click',alertVerified)
   alertVerified()
 }
 
@@ -106,4 +107,4 @@ form.tickets.addEventListener('change',setTickets)
 form.category.addEventListener('change', setCategory)
 form.addEventListener('submit',submit)
 resetB.addEventListener('click',reset)
-submitB.addEventListener('click',alertVerified)
+//submitB.addEventListener('click',alertVerified)
