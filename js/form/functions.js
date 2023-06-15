@@ -32,11 +32,17 @@ const setCategory = (e) => {
     const option = e.target.value
     console.log(option)
 
-    if(option=='none'){
+    if(option==='none'){
         resetCategory()
         return
     }
     category=option
+
+    const index= categories[category].value
+    const container= cardsContainer[index]
+    selected=index
+    changeBg(container,index)
+    eventsAssignamentAll()
 
     totalPrice()
 }
@@ -46,6 +52,7 @@ const setCategory = (e) => {
 const resetCategory = () => {
     total=null
     selected=null
+    eventsAssignamentAll()
     
     totalTag.innerText=totalText
     totalTag.style.color='grey'
@@ -59,7 +66,7 @@ const reset = (e) => {
    select.value='none'
 
    resetCategory()
-
+   
 }
 
 const submit = (e) => {
@@ -90,8 +97,12 @@ const submit = (e) => {
 
   console.log(send) 
   //alert('¡Formulario exitoso!')
+  reset(e)
   submitB.addEventListener('click',alertVerified)
   alertVerified()
+
+  //location.href='index.html'
+  
 }
 
 const alertVerified= (e) => {
@@ -100,6 +111,7 @@ const alertVerified= (e) => {
         'Ya puedes cerrar la página',
         'success'
     )
+
 }
 
 
